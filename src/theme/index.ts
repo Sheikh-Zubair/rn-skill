@@ -1,0 +1,27 @@
+import {createTheme} from '@rneui/themed';
+
+export const theme = createTheme({
+  lightColors: {
+    primary: '#416ec3',
+    primaryLight: '#5787dc',
+    primaryDark: '#3c6ec3',
+    transparent: '#00000000',
+    primaryLightGradient: [
+      'rgba(87, 135, 220, 0.8)',
+      'rgba(87, 135, 220, 0.6)',
+      'rgba(87, 135, 220, 0.4)',
+      'rgba(87, 135, 220, 0.1)',
+      'rgba(87, 135, 220, 0)',
+      'rgba(87, 135, 220, 0)',
+      'rgba(87, 135, 220, 0)',
+      'rgba(87, 135, 220, 0)',
+      'rgba(87, 135, 220, 0)',
+      // 'rgba(90,138,220,0.8)',
+      // 'rgba(90,138,220,0.6)',
+      // 'rgba(90,138,220,0.4)',
+    ],
+  },
+  darkColors: {
+    primary: '#000',
+  },
+});
