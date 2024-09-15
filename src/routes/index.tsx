@@ -21,6 +21,7 @@ export const Routes = () => {
       <Stack.Navigator
         screenOptions={{
           gestureEnabled: true,
+          // This will navigation bar at the bottom of the
           navigationBarHidden: true,
         }}>
         <Stack.Screen

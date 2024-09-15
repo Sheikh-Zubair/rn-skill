@@ -11,6 +11,10 @@ interface BackgroundWrapperProps {
   containerStyle?: ViewStyle;
 }
 
+/**
+ * @summary A wrapper component that provides a gradient overlay at the top and bottom of the screen
+ * and a scrollable content area in the middle with a background color
+ */
 const BackgroundWrapper: React.FC<BackgroundWrapperProps> = ({
   children,
   gradientColors = ['#00000000'],
@@ -26,7 +30,9 @@ const BackgroundWrapper: React.FC<BackgroundWrapperProps> = ({
         ...(containerStyle ? containerStyle : {}),
         backgroundColor: containerBgColor,
       }}>
+      {/* This LinearGradient is responsible for showing gradient overlay at the top */}
       <LinearGradient colors={gradientColors} style={styles.linearGradient} />
+      {/* This LinearGradient is responsible for showing gradient overlay at the bottom */}
       <LinearGradient
         colors={[...bottomGradientColors.slice().reverse()]}
         style={styles.linearGradientBottom}
@@ -51,6 +57,7 @@ const styles = StyleSheet.create({
     zIndex: 100,
     width: '100%',
     height: '100%',
+    // this is important to make sure the content beneath the gradient overlay is still accessible
     pointerEvents: 'none',
   },
   linearGradientBottom: {
@@ -61,6 +68,7 @@ const styles = StyleSheet.create({
     right: 0,
     width: '100%',
     height: '30%',
+    // this is important to make sure the content beneath the gradient overlay is still accessible
     pointerEvents: 'none',
   },
   scrollContainer: {

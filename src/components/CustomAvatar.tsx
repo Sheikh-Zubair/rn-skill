@@ -9,6 +9,9 @@ interface AvatarProps {
   rounded?: boolean;
 }
 
+/**
+ * @summary An avatar component build on top of the Avatar component from @rneui/themed
+ */
 const CustomAvatar: React.FC<AvatarProps> = ({
   size = 25,
   title,

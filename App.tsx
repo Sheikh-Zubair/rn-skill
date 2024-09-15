@@ -25,10 +25,6 @@ function App(): React.JSX.Element {
   return (
     <SafeAreaProvider style={{...styles.container, ...backgroundStyle}}>
       <ThemeProvider theme={{...theme, mode: isDarkMode ? 'dark' : 'light'}}>
-        {/* <StatusBar
-          barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-          backgroundColor={backgroundStyle.backgroundColor}
-        /> */}
         <View style={styles.container}>
           <Routes />
         </View>
