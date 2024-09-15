@@ -22,7 +22,7 @@ const CustomAvatar: React.FC<AvatarProps> = ({
       size={size}
       {...(imgSource && {source: imgSource})}
       rounded={rounded}
-      title={title}
+      title={imgSource ? '' : title}
       titleStyle={{...styles.title, color: theme.colors?.primaryLight}}
       containerStyle={{
         ...styles.avatarContainer,
